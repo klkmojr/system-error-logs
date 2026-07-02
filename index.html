@@ -1,10 +1,29 @@
-System Lock
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <title>System Lock</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body style="background-color: black; color: #00ff00; text-align: center; margin-top: 20%; font-family: monospace;">
   
+  <!-- 
+  L⁣‌‍⁣⁣O​​‌⁣​G﻿⁢⁢​​ ​‌⁢﻿⁣F‌⁢⁢‍‍I﻿⁢﻿‍⁤L​⁣⁣⁠⁢E⁢⁤﻿﻿‍:﻿⁢﻿‌‌ ⁣⁣‍﻿﻿M​⁣⁤﻿​E‍﻿‌﻿⁠T⁤​‌﻿⁢A⁠⁤​⁠‍_⁠⁠⁠‌﻿S﻿⁤‌‍⁣U⁤⁠‌⁠⁠P⁢⁤﻿⁠⁣P‍⁠⁢‌‌O‌⁤⁢⁢​R‍⁢‍‍​T⁣‌⁤⁣‍_﻿‍⁤⁣⁠T⁠⁣⁢⁠⁠I​⁠⁣⁤‌C‍‍⁣⁢‌K⁣﻿​⁣‌E⁢﻿﻿‌‍T‌⁣‍⁠⁣_﻿‌​‍⁠7​⁢‍⁢⁤3⁠﻿﻿⁤⁤7⁢⁣﻿⁠​7​0
+  
+  CIPHER_LOCK:
+  12-4-2 . 18-1-7 . 4-3-12 . 22-5-1 . 9-2-4 . 11-6-8 . 3-1-2 . 14-4-5 . 7-2-9
+  -->
+  
+  <p>A human response is required to proceed.</p>
+  <input type="text" id="passphrase" style="background: black; color: #00ff00; border: 1px solid #00ff00; padding: 5px;">
+  <button onclick="checkKey()" style="background: black; color: #00ff00; border: 1px solid #00ff00; padding: 5px; cursor: pointer;">Submit</button>
 
-
-  
-  
-  
-  A response is required to proceed.
-  
-  Submit
+  <script>
+    function checkKey() {
+      let input = document.getElementById("passphrase").value.toLowerCase().trim();
+      let hash = CryptoJS.SHA256(input).toString();
+      window.location.href = hash + ".html"; 
+    }
+  </script>
+</body>
+</html>
